@@ -1,4 +1,4 @@
-# smart-contract-security-guidelines
+# Smart contract security guidelines
 
 (Not only for EVM)
 
@@ -20,3 +20,20 @@ Your Exception can be caught by the caller of the contract. (Though EVM has only
 
 Do not write anything or call any untrusted contract before you throw an Exception. 
 
+# P2P network layer security guidelines
+
+#### Only relay verified payloads
+
+We do not need a flood of rubbish packages being relayed by naive honest nodes! This prevents someone utilizing your P2P network as an instant messaging or bittorrent software. 
+
+#### Send payloads passively
+
+Do not broadcast something that you just received. Anything sent by codes may lead to broadcast storms. Send payloads with careful bandwidth limit on idempotent `GET` requests. 
+
+#### Verify the source IP address before responding
+
+Make sure the source of the connection is exactly that indicated in the incoming message. An easy way is to use TCP, in case you get utilized for a Reflection Amplification DDOS attack. 
+
+#### Close a connection only on verified request
+
+Still you should carefully verify the source IP address which sent you something that let you decide to close the connection. In blockchain networks your connection to a remote host may be known by a third party. 
