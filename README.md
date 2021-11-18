@@ -37,3 +37,7 @@ Make sure the source of the connection is exactly that indicated in the incoming
 #### Close a connection only on verified request
 
 Still you should carefully verify the source IP address which sent you something that let you decide to close the connection. In blockchain networks your connection to a remote host may be known by a third party. 
+
+#### Your connection may be listened by a third party
+
+Surely you do not have mechanisms like `HTTPS`. You might be talking to a third party which retransmits your messages to your designated target. You may be even talking to yourself if the third party decide to modify and retransmit messages to yourself. 
