@@ -1,4 +1,4 @@
-# Smart contract security guidelines
+# Smart contract layer
 
 (Not only for EVM)
 
@@ -20,7 +20,7 @@ Your Exception can be caught by the caller of the contract. (Though EVM has only
 
 Do not write anything or call any untrusted contract before you throw an Exception. 
 
-# P2P network layer security guidelines
+# P2P network layer
 
 #### Only relay verified payloads
 
@@ -41,3 +41,7 @@ Still you should carefully verify the source IP address which sent you something
 #### Your connection may be listened by a third party
 
 Surely you do not have mechanisms like `HTTPS`. You might be talking to a third party which retransmits your messages to your designated target. You may be even talking to yourself if the third party decide to modify and retransmit messages to yourself. 
+
+# Garbage Collection
+
+There have been many denial-of-service vulnerabilities related to garbage collection codes of common programming languages. And such vulnerabilities on the blockchain may lead to total failure of all nodes if vicious smart contracts are executed by an attacker.
