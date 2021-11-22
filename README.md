@@ -24,11 +24,11 @@ Do not write anything or call any untrusted contract before you throw an Excepti
 
 #### Only relay verified payloads
 
-We do not need a flood of rubbish packages being relayed by naive honest nodes! This prevents someone utilizing your P2P network as an instant messaging or bittorrent software. 
+We do not need a flood of rubbish packages being relayed by naïve honest nodes! Relaying only verified payloads prevents someone utilizing your P2P network as an instant messaging or bittorrent software, or just cast a broadcast storm attack. 
 
 #### Send payloads passively
 
-Do not broadcast something that you just received. Anything sent by codes may lead to broadcast storms. Send payloads with careful bandwidth limit on idempotent `GET` requests. 
+Do not broadcast something that you just received. Anything sent by codes may lead to broadcast storms. It's safer to send payloads with careful bandwidth limit on idempotent `GET` requests. 
 
 #### Verify the source IP address before responding
 
