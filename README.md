@@ -16,7 +16,7 @@ If in a contract method you set something that may globally affect the contract'
 
 #### Throwing an Exception may not stop the contract
 
-Your Exception can be caught by the caller of the contract. (Though EVM has only one type of safe exception "Out of GAS")
+Your Exception can be caught by the caller of the contract. (Though EVM has only one type of safe exception "Out of GAS"; Neo has isolated snapshots of the execution of different smart contracts, thus avoiding the problem)
 
 Do not write anything or call any untrusted contract before you throw an Exception. 
 
