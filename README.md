@@ -40,6 +40,12 @@ This sounds like an unbelievable type of mistakes, but such mistakes do occur. D
 
 **Be extremely careful when you mix all kinds of calls. There can be critical risk of re-entrancy.** 
 
+#### Better have the verification logics executed only once in one transaction
+
+If the verification can be executed for many times in a single transaction, usually what is being verified is varying. There is much higher risk that what you are verifying is not exactly what you want. 
+
+For example: You are going to verify `msg.value == input_ETH_amount` for many times in the same transaction. Then an attacker can pass your verification many times to let you think the attacker has many ETH, by sending only 1 ETH.
+
 # P2P network layer
 
 #### Only relay verified payloads
