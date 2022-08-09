@@ -46,6 +46,10 @@ If the verification can be executed for many times in a single transaction, usua
 
 For example: You are going to verify `msg.value == input_ETH_amount` for many times in the same transaction. Then an attacker can pass your verification many times to let you think the attacker has many ETH, by sending only 1 ETH.
 
+#### Be careful when using global variables in a loop
+
+Dangerous!
+
 # P2P network layer
 
 #### Only relay verified payloads
