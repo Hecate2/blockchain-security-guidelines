@@ -50,6 +50,10 @@ For example: You are going to verify `msg.value == input_ETH_amount` for many ti
 
 Dangerous!
 
+#### Get familiar with all the data types you use
+
+And execute the common best practices to prevent underflow and overflow!
+
 # P2P network layer
 
 #### Only relay verified payloads
