@@ -54,6 +54,10 @@ Dangerous!
 
 And execute the common best practices to prevent underflow and overflow!
 
+#### Safe components do not automatically bring a safe system
+
+Read codes using depth-first search, instead of breadth-first search.
+
 # P2P network layer
 
 #### Only relay verified payloads
