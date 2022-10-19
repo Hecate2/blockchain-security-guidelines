@@ -8,7 +8,7 @@ Flash loan can offer a large number of tokens at little costs. For example, anyo
 
 #### Ensure our benefits first; Set local state first
 
-This is to prevent reentrancy attack. The common lesson from `the DAO` taught us to set the local environments in our contract before calling another contract. But additionally, for example, we should first transfer a user's balance to our contract, then transfer ours to the user. 
+This is to prevent reentrancy attack. The common lesson from `the DAO` taught us to set the local environments in our contract before calling another contract. In other words, do not read or write the storage after an untrusted call, because the untrusted call may change the storage to create obsolete/unreasonable values. But additionally, for example, we should first transfer a user's balance to our contract, then transfer ours to the user. 
 
 #### Preventing denial of service
 
